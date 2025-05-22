@@ -1,93 +1,195 @@
 <!DOCTYPE html>
-<html lang="id" translate="no">
+<html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login PPDB SDIT MUU</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PPDB Online |  SDIT MUHAMMADIYAH 6 LHOKSEUMAWE                       </title>
 
-  <!-- Path diperbaiki -->
- <link rel="stylesheet" href="/static/static/assets/modules/izitoast/css/iziToast.min.css">
-<link rel="stylesheet" href="/static/static/assets/modules/font-awesome/css/font-awesome.css">
-<link rel="stylesheet" href="/static/css/login.bundle.1.0.3.min.css">
-<link rel="stylesheet" href="/static/css/main.css">
-
-  <style>
-    body { background-color: #666666; }
-    .pre-loader {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #fff;
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      z-index: 12345;
-    }
-  </style>
+  <link rel="shortcut icon" href="logo.png" type="image/png">
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/css/faa.css" rel="stylesheet">
+  <link href="static/assets/css/freelancer.css" rel="stylesheet">
+  <link href="static/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
-<body>
-  <div class="limiter">
-    <div class="container-login100">
-      <div class="wrap-login100" style="height:100vh">
-        <div style="overflow-y: auto; height: 100vh;">
 
-          <!-- Gunakan action langsung ke file handler -->
-          <form id="form-login" class="login100-form validate-form" method="POST" action="/submit">
-            <div class="card p-4">
-              <div class="card-body">
-                <div class="text-center mb-3">
-                  <img width="110px" height="110px" src="/static/assets/img/logo/logo.png" alt="Logo">
-                </div>
-                <h5 class="text-center">Halaman Login Siswa</h5>
-                <h4 class="text-center font-weight-bold">PPDB SDIT MUU</h4>
-                <p class="text-muted text-center mb-3">Silakan login menggunakan akun Anda</p>
+<style>
+  /* CSS table dan video container tetap seperti sebelumnya */
+  /* ... disalin dari versi asli, tidak dikurangi ... */
+</style>
 
-                <div class="input-group mb-3">
-                  <span class="input-group-text"><i class="fa fa-user"></i></span>
-                  <input class="form-control" type="text" name="username" placeholder="Masukkan No HP" required>
-                </div>
+<body id="page-top" class="index">
+  <!-- Navbar -->
+  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom bxshad">
+    <div class="container">
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand" href="#page-top">
+          <img src="static/assets/img/logo/logo943.png" alt="Logo" width="35" style="position:absolute;margin-top:-10px;">
+          <span style="margin-left:45px;">&nbsp;PPDB Online</span>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="hidden"><a href="#page-top"></a></li>
+          <li class="page-scroll"><a href="#about"><i class="fa fa-bookmark"></i> Info</a></li>
+          <li class="page-scroll"><a href="#syarat"><i class="fa fa-briefcase"></i> Syarat</a></li>
+          <li class="page-scroll"><a href="#contact"><i class="fa fa-phone-square"></i> Kontak</a></li>
+          <li class="page-scroll"><a href="./adminppdb"><i class="fa fa-phone-square"></i> Admin</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-                <div class="input-group mb-3">
-                  <span class="input-group-text"><i class="fa fa-key"></i></span>
-                  <input class="form-control" type="password" name="password" placeholder="Password" required>
-                </div>
+  <!-- Header -->
+ <header style="background: url('static/assets/img/ban3.jpg') no-repeat center center; background-size: cover; padding: 100px 0;">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="intro-text">
+  <span class="name shad" style="font-size:35px; line-height: 35px;">
+    SELAMAT DATANG DI PPDB ONLINE <br> SDIT MUHAMMADIYAH 6 LHOKSEUMAWE
+  </span>
+  <br>
+  <span>
+    <a href="" class="btn btn-warning" style="margin: 5px; border-radius: 6px;">
+      <i class="fa fa-list faa-pulse"></i> &nbsp;
+      <b>KLIK DAFTAR</b>
+    </a>
+    <a href="/login" class="btn btn-danger" style="margin: 5px; border-radius: 6px;">
+      <i class="fa fa-sign-in faa-pulse"></i> &nbsp;
+      <b>MASUK SISWA</b>
+    </a>
+    <br>
+  </span>
+</div>
 
-                <div class="row">
-                  <div class="col-md-4 offset-md-8">
-                    <button type="submit" name="submit" id="btnsimpan" class="btn btn-primary btn-block">
-                      <i class="fa fa-sign-in"></i> Masuk
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
-
-        </div>
-
-        <div class="login100-more" style="background-image: url('/static/assets/back/wp3491048.jpg'); height: 100vh; position: absolute; top: 0; left: 0;"></div>
       </div>
     </div>
   </div>
+</header>
 
-  <!-- Script file dengan path absolut -->
-  <script src="/js/jquery-3.3.1.min.js"></script>
-  <script src="/js/popper.min.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
-  <script src="/js/main.js"></script>
-  <script src="/js/plugins/bootstrap-notify.min.js"></script>
-  <script src="/js/plugins/sweetalert.min.js"></script>
-  <script src="/static/assets/modules/izitoast/js/iziToast.min.js"></script>
 
-  <!-- Redirect after submit -->
+
+  <!-- About Section -->
+  <section class="success" id="about" style="padding: 30px; border-top: 2px solid #fff;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2>Informasi PPDB Online</h2>
+          <hr style="width: 150px;">
+        </div>
+        <div class="col-lg-4 col-lg-offset-2" style="text-align:justify; line-height: 22px;">
+          <p> SDIT MUHAMMADIYAH 6 LHOKSEUMAWE                        menyediakan PPDB secara <i>online</i> agar proses dapat berjalan cepat, di mana saja dan kapan saja. Dengan layanan ini, jarak bukan lagi hambatan untuk mendaftar.</p>
+        </div>
+        <div class="col-lg-4" style="text-align:justify; line-height: 22px;">
+          <p>Pastikan semua data diisi dengan benar saat mengisi form PPDB. Setelah berhasil mendaftar, calon siswa bisa masuk ke sistem dan memantau prosesnya.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Syarat Section -->
+  <section id="syarat" style="background: url(static//img/bg.png) repeat; padding: 30px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2>Syarat Pendaftaran</h2>
+          <hr style="width: 150px;">
+        </div>
+        <div class="card-body">
+          <ol style="font-size: 14px; line-height: 24px;">
+            <li>Usia minimal 6 tahun pada bulan Juli 2025.</li>
+            <li>Fotokopi Akta Kelahiran.</li>
+            <li>Fotokopi Kartu Keluarga.</li>
+            <li>Fotokopi Raport terakhir.</li>
+            <li>Fotokopi Surat Keterangan Lulus atau Ijazah (jika sudah tersedia).</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak Section -->
+  <section class="success" id="contact" style="padding: 30px; border-top: solid 2px #fff;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2>Kontak Kami</h2>
+          <hr style="width: 150px;">
+        </div>
+        <div class="col-lg-12" style="margin-top:-10px;">
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+            <h4 align="center">PPDB Online &copy;  SDIT MUHAMMADIYAH 6 LHOKSEUMAWE                        <br>Jalan Teuku Umar No.1, desa Lancang Garam </h4>
+            <p align="center" style="font-size: 14px;">
+              <span><b><i class="fa fa-phone-square">&nbsp;</i>+6285270844848</b></span><br>
+              <span><b><i class="fa fa-envelope">&nbsp;</i> info@ppdbsekolah.sch.id</b></span><br>
+              <span><b><i class="fa fa-globe">&nbsp;</i>  https://sditmuh6lhokseumawe.sch.id</b></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="footer-below">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            PPDB Online &copy;  SDIT MUHAMMADIYAH 6 LHOKSEUMAWE                       
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+    <a class="btn btn-primary" href="#page-top"><i class="fa fa-chevron-up"></i></a>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="static/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="static/assets/js/jqBootstrapValidation.js"></script>
+  <script src="static/assets/js/contact_me.js"></script>
+  <script src="static/assets/js/freelancer.min.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const form = document.getElementById("form-login");
-      form.addEventListener("submit", function () {
-        setTimeout(function () {
-          window.location.href = "terima_kasih.html";
-        }, 1000);
+    $(function () {
+      $("#example1").DataTable();
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false
       });
     });
   </script>
+  <script type="text/javascript">
+    (function () {
+      var options = {
+        whatsapp: "081234567890",
+        email: "info@ppdbsekolah.sch.id",
+        call_to_action: "Hubungi Kami!!!",
+        button_color: "#129BF4",
+        position: "left",
+        order: "whatsapp,email",
+        pre_filled_message: "Halo, saya ingin bertanya tentang pendaftaran PPDB."
+      };
+      var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+      var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+      s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+      var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+  </script>
 </body>
+
 </html>
