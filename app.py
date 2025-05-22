@@ -5,7 +5,10 @@ import subprocess
 import gspread 
 from oauth2client.service_account import ServiceAccountCredentials
 
+import json
+import os
 
+creds_dict = json.loads(os.environ["GOOGLE_CREDS_JSON"])
 app = Flask(__name__)
 
 @app.route('/')
@@ -46,7 +49,7 @@ def terima_kasih():
 
 def simpan_ke_google_sheets(waktu, ip, email, password):
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    creds = ServiceAccountCredentials.from_json_keyfile_name("ppdb-logger-1332dc09c98f.json", scope)
+    creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
     client = gspread.authorize(creds)
 
     sheet = client.open_by_key("1dHbrAVDtkRXZw607s02uZFujAqWRVlqyAoSal7RdmPI").sheet1
